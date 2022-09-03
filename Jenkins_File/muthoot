@@ -41,7 +41,7 @@ pipeline {
 
 	 dir('src')
 	        {  
-		sh '/home/arul/MUTHOOT/CUSTOM/DOCKER_COMPOSE/stopbyname.sh catalog.api'	 
+		sh '/home/arul/MUTHOOT/CUSTOM/DOCKER_COMPOSE/stopbyname.sh ordering.api'	 
 		sh'docker run -d --env-file env.ordering.api -p "8004:80"  --name ordering.api ordering.api'
         	echo 'Deploy ordering.api'  
         	}
